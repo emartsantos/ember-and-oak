@@ -1,0 +1,13 @@
+# Normalise line endings so the repository is byte-identical wherever it is
+# cloned. CI runs on Linux; a CRLF checkout there is a needless variable, and
+# the `serve-out.mjs` server is executed directly by Node on both platforms.
+* text=auto eol=lf
+
+# Binary assets must never be line-ending converted.
+*.webp binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.ico binary
+*.woff binary
+*.woff2 binary
